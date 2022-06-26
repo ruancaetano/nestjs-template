@@ -1,0 +1,13 @@
+# development docker compose
+version: "3"
+services:
+  postgres:
+    image: postgres:alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: development
+      POSTGRES_DB: dbname
+      PGDATA: /var/lib/postgres
